@@ -3,17 +3,19 @@ package hello.itemservice.web.usercontroller;
 import hello.itemservice.domain.item.Item;
 import hello.itemservice.domain.user.User;
 import hello.itemservice.domain.user.UserRepository;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
+
 import java.util.List;
 
 @Controller
 @RequestMapping("/users")
 @RequiredArgsConstructor
 @ResponseBody
+@CrossOrigin(origins = "*")
 public class UserController {
     private final UserRepository userRepository;
 

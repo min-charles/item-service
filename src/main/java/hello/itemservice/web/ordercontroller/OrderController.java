@@ -10,13 +10,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Controller
 @RequestMapping("/orders")
 @RequiredArgsConstructor
 @ResponseBody
+@CrossOrigin(origins = "*")
 public class OrderController {
     private final OrderRepository orderRepository;
     private final ItemRepository itemRepository;

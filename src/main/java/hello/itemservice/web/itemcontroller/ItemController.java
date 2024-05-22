@@ -2,17 +2,18 @@ package hello.itemservice.web.itemcontroller;
 
 import hello.itemservice.domain.item.Item;
 import hello.itemservice.domain.item.ItemRepository;
+import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 
 @Controller
 @RequestMapping("/items")
 @RequiredArgsConstructor
 @ResponseBody
+@CrossOrigin(origins = "*")
 public class ItemController {
 
     private final ItemRepository itemRepository;
