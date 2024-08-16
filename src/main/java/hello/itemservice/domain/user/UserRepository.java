@@ -11,6 +11,7 @@ import java.util.Map;
 public class UserRepository {
     private static final Map<String, User> store = new HashMap<>(); //static
     private static long sequence = 0L; //static
+    private static long test = 9L;
 
     public User save(User user) {
         user.setId(++sequence);
